@@ -1,0 +1,11 @@
+//To scrap a page
+wget -q -O- https://dl.dropboxusercontent.com/s/wm6mt2ew0nnqdu6/links.html?dl=1 | sed -r 's#<a href="([^"]+)">([^<]+)</a>.*$#\2 - \1#' > links.txt
+
+//To create the checksum
+sha256sum links.txt >checksum
+
+//To check the checksum is correct or not.
+sha256sum --check checksum
+
+//To sent an email
+ssmtp arunwebber@protonmail.com < msg1.txt
