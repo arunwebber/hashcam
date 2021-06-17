@@ -28,4 +28,6 @@ if($fileHash==$dynamicHash){
   $output = shell_exec('ssmtp hash@lawsoncreativeworks.com < msg1.txt');
   echo $output;
 }
+//This simple script create a text with a hash and check the hash aganist the pages
+//When ever it runs
 ?>
