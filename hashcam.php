@@ -1,9 +1,8 @@
 <?php
 //When you are accessing this file firest time delete file called hash.txt
 $htmlfile = __DIR__ .'/cam.html';
-$content = file_get_contents("https://arunsyoga.in/hello.html");
-//$content = file_get_contents("https://eduladder.com");
-//$content = file_get_contents("https://web.ics.purdue.edu/~gchopra/class/public/pages/webdesign/05_simple.html");
+//This were the source page has to be added for example(http://example.com/page_hashed.html)
+$content = file_get_contents("http://example.com/page_hashed.html");
 file_put_contents("cam.html", $content);
 echo "Dynamic Hash";
 echo $dynamicHash = hash_file('sha256', $htmlfile);
