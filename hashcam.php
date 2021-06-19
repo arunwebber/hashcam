@@ -20,11 +20,13 @@ fclose($checksum_check);
 
 if($fileHash==$dynamicHash){
   echo "Hashes Matches";
-  $output = shell_exec('ssmtp hash@lawsoncreativeworks.com < msg.txt');
+//Add here which email the mail has to be delivered
+  $output = shell_exec('ssmtp you@example.com < msg.txt');
   echo $output;
 }else{
   echo "Hashes Dont match";
-  $output = shell_exec('ssmtp hash@lawsoncreativeworks.com < msg1.txt');
+  //Add here which email the mail has to be delivered
+  $output = shell_exec('ssmtp you@example.com < msg1.txt');
   echo $output;
 }
 //This simple script create a text with a hash and check the hash aganist the pages
