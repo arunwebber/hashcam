@@ -5,7 +5,9 @@ $htmlfile = __DIR__ .'/cam.html';
 $content = file_get_contents("http://example.com/page_hashed.html");
 file_put_contents("cam.html", $content);
 echo "Dynamic Hash";
+//Getting a sha 256 hash
 echo $dynamicHash = hash_file('sha256', $htmlfile);
+//Checking Whether the file is existing or not
 $isFile = file_exists(__DIR__ .'/hash.txt');
 //Writing the primary hash
 if($isFile!=1){
@@ -25,7 +27,7 @@ if($fileHash==$dynamicHash){
   echo $output;
 }else{
   echo "Hashes Dont match";
-  //Add here which email the mail has to be delivered
+//Add here which email the mail has to be delivered
   $output = shell_exec('ssmtp you@example.com < msg1.txt');
   echo $output;
 }
