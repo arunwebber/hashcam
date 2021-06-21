@@ -28,7 +28,7 @@ if($fileHash==$dynamicHash){
   $to = "example@email.com";
   $subject = "Hashes Dont Matches";
   $txt = 'Original Hash:'.$fileHash.'Hash Now:'.$dynamicHash;
-  $headers = "From:arunwebber@gmail.com";
+  $headers = "From:mail@email.com";
   mail($to,$subject,$txt,$headers);
 }
 //This simple script create a text with a hash and check the hash aganist the pages
